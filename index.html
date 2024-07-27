@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Addition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -10,6 +11,7 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            margin: 0;
         }
         h1 {
             color: #333;
@@ -29,6 +31,7 @@
             padding: 0;
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
         nav ul li a {
             color: white;
@@ -45,6 +48,7 @@
         }
         .controls {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
@@ -61,12 +65,12 @@
             text-align: center;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
         }
         th, td {
             border: 1px solid #ddd;
             padding: 10px;
-            width: 60px;
-            height: 60px;
         }
         th {
             background-color: #f2f2f2;
@@ -103,14 +107,44 @@
             align-items: center;
             margin-top: 20px;
         }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            .controls, .bottom-controls {
+                flex-direction: column;
+            }
+
+            .control-group, button, select {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+
+            button, select {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            table, th, td {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
     </style>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="https://sahilrmaniyar.github.io/calculationpractise/">Home</a></li>
-            <li><a href="#" class="disabled">Addition</a></li>
-            <li><a href="https://sahilrmaniyar.github.io/subtraction/">Subtraction</a></li>
+            <li><a href="https://sahilrmaniyar.github.io/Addition/" class="disabled">Addition</a></li>
+            <li><a href="https://sahilrmaniyar.github.io/Subtraction/">Subtraction</a></li>
         </ul>
     </nav>
     
